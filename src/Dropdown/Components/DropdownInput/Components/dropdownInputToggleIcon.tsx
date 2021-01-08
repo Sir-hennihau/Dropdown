@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 interface DropdownInputToggleIconProps {
   isActive: boolean;
@@ -9,4 +10,11 @@ interface DropdownInputToggleIconProps {
  */
 export const DropdownInputToggleIcon = ({
   isActive,
-}: DropdownInputToggleIconProps) => (isActive ? <p>^</p> : <p>v</p>);
+}: DropdownInputToggleIconProps) => (
+  <DropdownInputToggleText>{isActive ? "^" : "v"}</DropdownInputToggleText>
+);
+
+const DropdownInputToggleText = styled.p`
+  color: gray;
+  margin-right: 10px;
+`;
